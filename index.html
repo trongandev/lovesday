@@ -24,15 +24,22 @@
                     <img src="./img/img1.jpg" class="avt" />
                     <p>Trọng An</p>
                 </div>
-                <div id="heart">❤<anni>30/07/2023</anni></div>
+                <div id="heart"><anni>30/07/2023</anni></div>
                 <div class="two">
                     <img src="./img/img2.jpg" class="avt" />
                     <p>Lan Thanh</p>
                 </div>
             </div>
-            <footer>Yêu Lan Thanh 💕</footer>
-        </div>
 
-        <script src="app.js"></script>
+            <h1><br /><span class="ityped"></span></h1>
+        </div>
+        <script src="./app.js"></script>
+        <script src="https://unpkg.com/ityped@0.0.10"></script>
+        <script>
+            window.ityped.init(document.querySelector(".ityped"), {
+                strings: ["Love youuu Lan Thanh 💕"],
+                loop: true,
+            })
+        </script>
     </body>
 </html>
