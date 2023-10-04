@@ -97,6 +97,6 @@ var love = setInterval(function () {
 }, 500)
 
 window.ityped.init(document.querySelector(".ityped"), {
-    strings: ["Yêu Lan Thanh 💕"],
+    strings: ["Yêu Hoàng Thanh 💕"],
     loop: true,
 })
