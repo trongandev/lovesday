@@ -1,4 +1,4 @@
-const yourDate = new Date("2023-09-10T00:00:00")
+const yourDate = new Date("2023-11-13T00:00:00")
 
 document.addEventListener(
     "DOMContentLoaded",
@@ -97,6 +97,6 @@ var love = setInterval(function () {
 }, 500)
 
 window.ityped.init(document.querySelector(".ityped"), {
-    strings: ["Yêu Hoàng Thanh 💕"],
+    strings: ["Yêu Thảo Trinh 💕"],
     loop: true,
 })
