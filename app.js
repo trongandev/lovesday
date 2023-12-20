@@ -1,4 +1,4 @@
-const yourDate = new Date("2023-11-23T00:00:00")
+const yourDate = new Date("2023-12-03T00:00:00")
 
 document.addEventListener(
     "DOMContentLoaded",
