@@ -10,7 +10,6 @@ document.addEventListener(
         }-${yourDate.getFullYear()}`;
 
         document.querySelector("date").textContent = Math.floor(Math.floor((new Date() - yourDate) / 1000) / 60 / 60 / 24) + " DAYS";
-
         function olock() {
             var today = new Date(),
                 hrs = Math.floor(Math.floor((today - yourDate) / 1000) / 60 / 60) % 24,
@@ -21,6 +20,7 @@ document.addEventListener(
         olock();
         var timer = setInterval(function () {
             olock();
+            document.title = document.querySelector("date").textContent + " " + document.querySelector("time").textContent;
         }, 1000);
 
         document.getElementsByTagName("body")[0].insertAdjacentHTML("beforeend", "<div id='mask'></div>");
