@@ -21,6 +21,19 @@ document.addEventListener(
         var timer = setInterval(function () {
             olock()
             document.title = document.querySelector("date").textContent + " " + document.querySelector("time").textContent
+
+            let metaOGDescription = document.querySelector('meta[property="og:description"]')
+
+            if (metaOGDescription) {
+                // Nếu thẻ tồn tại, thay đổi nội dung
+                metaOGDescription.setAttribute("content", `Đếm ngày iu thương của Trọng An ❤️ Thảo My đến nay đã được ${document.querySelector("date").textContent}`)
+            } else {
+                // Nếu thẻ không tồn tại, tạo mới
+                metaOGDescription = document.createElement("meta")
+                metaOGDescription.setAttribute("property", "og:description")
+                metaOGDescription.setAttribute("content", `Đếm ngày iu thương của Trọng An ❤️ Thảo My đến nay đã được ${document.querySelector("date").textContent}`)
+                document.head.appendChild(metaOGDescription)
+            }
         }, 1000)
 
         document.getElementsByTagName("body")[0].insertAdjacentHTML("beforeend", "<div id='mask'></div>")
