@@ -109,6 +109,19 @@ anni {
     text-align: center;
 }
 
+.img-and-video {
+    grid-column: span 3;
+    padding: 0 30px;
+}
+.img-and-video img {
+    width: 100%;
+    border-radius: 10px;
+}
+.img-and-video video {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
 footer {
     grid-column: span 3;
     text-align: center;
@@ -132,6 +145,7 @@ footer {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: -1;
 }
 
 @media (max-width: 992px) {

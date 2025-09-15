@@ -1,43 +1,43 @@
-const yourDate = new Date("2025-04-29T00:00:00");
+const yourDate = new Date("2025-08-24T00:00:00")
 
 document.addEventListener(
     "DOMContentLoaded",
     function () {
-        var rootTime = document.querySelector("time");
+        var rootTime = document.querySelector("time")
 
         document.querySelector("anni").textContent = `${yourDate.getDate() > 9 ? yourDate.getDate() : "0" + yourDate.getDate()}-${
             yourDate.getMonth() > 8 ? yourDate.getMonth() + 1 : "0" + (yourDate.getMonth() + 1)
-        }-${yourDate.getFullYear()}`;
+        }-${yourDate.getFullYear()}`
 
-        document.querySelector("date").textContent = Math.floor(Math.floor((new Date() - yourDate) / 1000) / 60 / 60 / 24) + " DAYS";
+        document.querySelector("date").textContent = Math.floor(Math.floor((new Date() - yourDate) / 1000) / 60 / 60 / 24) + " DAYS"
         function olock() {
             var today = new Date(),
                 hrs = Math.floor(Math.floor((today - yourDate) / 1000) / 60 / 60) % 24,
                 min = Math.floor(Math.floor((today - yourDate) / 1000) / 60) % 60,
-                sec = Math.floor((today - yourDate) / 1000) % 60;
-            rootTime.textContent = `${hrs > 9 ? hrs : "0" + hrs}:${min > 9 ? min : "0" + min}:${sec > 9 ? sec : "0" + sec}`;
+                sec = Math.floor((today - yourDate) / 1000) % 60
+            rootTime.textContent = `${hrs > 9 ? hrs : "0" + hrs}:${min > 9 ? min : "0" + min}:${sec > 9 ? sec : "0" + sec}`
         }
-        olock();
+        olock()
         var timer = setInterval(function () {
-            olock();
-            document.title = document.querySelector("date").textContent + " " + document.querySelector("time").textContent;
-        }, 1000);
+            olock()
+            document.title = document.querySelector("date").textContent + " " + document.querySelector("time").textContent
+        }, 1000)
 
-        document.getElementsByTagName("body")[0].insertAdjacentHTML("beforeend", "<div id='mask'></div>");
+        document.getElementsByTagName("body")[0].insertAdjacentHTML("beforeend", "<div id='mask'></div>")
     },
     false
-);
+)
 
 $("#header-plugin").load("https://vivinantony.github.io/header-plugin/", function () {
-    $("a.back-to-link").attr("href", "http://blog.thelittletechie.com/2015/03/love-heart-animation-using-css3.html#tlt");
-});
+    $("a.back-to-link").attr("href", "http://blog.thelittletechie.com/2015/03/love-heart-animation-using-css3.html#tlt")
+})
 
 var love = setInterval(function () {
-    var r_num = Math.floor(Math.random() * 40) + 1;
-    var r_size = Math.floor(Math.random() * 65) + 10;
-    var r_left = Math.floor(Math.random() * 100) + 1;
-    var r_bg = Math.floor(Math.random() * 25) + 100;
-    var r_time = Math.floor(Math.random() * 5) + 5;
+    var r_num = Math.floor(Math.random() * 40) + 1
+    var r_size = Math.floor(Math.random() * 65) + 10
+    var r_left = Math.floor(Math.random() * 100) + 1
+    var r_bg = Math.floor(Math.random() * 25) + 100
+    var r_time = Math.floor(Math.random() * 5) + 5
 
     $(".bg_heart").append(
         "<div class='heart' style='width:" +
@@ -59,7 +59,7 @@ var love = setInterval(function () {
             "s ease;animation:love " +
             r_time +
             "s ease'></div>"
-    );
+    )
 
     $(".bg_heart").append(
         "<div class='heart' style='width:" +
@@ -81,22 +81,22 @@ var love = setInterval(function () {
             "s ease;animation:love " +
             (r_time + 5) +
             "s ease'></div>"
-    );
+    )
 
     $(".heart").each(function () {
         var top = $(this)
             .css("top")
-            .replace(/[^-\d\.]/g, "");
+            .replace(/[^-\d\.]/g, "")
         var width = $(this)
             .css("width")
-            .replace(/[^-\d\.]/g, "");
+            .replace(/[^-\d\.]/g, "")
         if (top <= -100 || width >= 150) {
-            $(this).detach();
+            $(this).detach()
         }
-    });
-}, 500);
+    })
+}, 500)
 
 window.ityped.init(document.querySelector(".ityped"), {
-    strings: ["Yêu Ly Kỳ 💕"],
+    strings: ["Yêu Thảo My 💕"],
     loop: true,
-});
+})
