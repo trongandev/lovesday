@@ -1,4 +1,4 @@
-const yourDate = new Date("2025-08-24T00:00:00")
+const yourDate = new Date("2025-12-04T00:00:00")
 
 document.addEventListener(
     "DOMContentLoaded",
@@ -26,12 +26,12 @@ document.addEventListener(
 
             if (metaOGDescription) {
                 // Nếu thẻ tồn tại, thay đổi nội dung
-                metaOGDescription.setAttribute("content", `Đếm ngày iu thương của Trọng An ❤️ Thảo My đến nay đã được ${document.querySelector("date").textContent}`)
+                metaOGDescription.setAttribute("content", `Đếm ngày iu thương của Trọng An ❤️ Tuyền Quyên đến nay đã được ${document.querySelector("date").textContent}`)
             } else {
                 // Nếu thẻ không tồn tại, tạo mới
                 metaOGDescription = document.createElement("meta")
                 metaOGDescription.setAttribute("property", "og:description")
-                metaOGDescription.setAttribute("content", `Đếm ngày iu thương của Trọng An ❤️ Thảo My đến nay đã được ${document.querySelector("date").textContent}`)
+                metaOGDescription.setAttribute("content", `Đếm ngày iu thương của Trọng An ❤️ Tuyền Quyên đến nay đã được ${document.querySelector("date").textContent}`)
                 document.head.appendChild(metaOGDescription)
             }
         }, 1000)
@@ -110,6 +110,6 @@ var love = setInterval(function () {
 }, 500)
 
 window.ityped.init(document.querySelector(".ityped"), {
-    strings: ["Yêu Thảo My 💕"],
+    strings: ["Yêu Tuyền Quyên 💕"],
     loop: true,
 })
